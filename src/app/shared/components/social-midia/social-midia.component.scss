@@ -2,17 +2,18 @@
     .social-midia {
         display: inline-block;
         position: fixed;
-        width:5%;
+        width:3%;
         z-index: 9999999999999;
         i {
-            color:black;
-            font-size:40px;
+            color:rgb(0, 0, 0);
+            font-size:30px;
             margin-top:10px;
+            text-shadow: 1px 1px 0px #ffffff28;
             &:hover {
                 cursor: pointer;
                 transform: translateY(-3px);
                 transition: .3s;
-                color:white;
+                color:rgb(92, 92, 92);
             }
         }
     }

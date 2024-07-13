@@ -1,70 +1,27 @@
 :host {
-    .images {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgb(134, 135, 138);
-        width: 100%;
-        height: 100%;
-        
-    }
-    
     .image-gallery {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background: rgb(134, 135, 138);
+        justify-content: space-around;
+        padding: 10px;
     }
     
     .image-item {
-        flex: 1 0 25%;
-        max-width: 25%;
-        position: relative;
-        padding-bottom: 25%;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-
-        @media (max-width: 1200px) {
-            flex: 1 0 33.33%;
-            max-width: 33.33%;
-            padding-bottom: 33.33%;
-        }
-        @media (max-width: 2000px) {
-            flex: 1 0 33.33%;
-            max-width: 33.33%;
-            padding-bottom: 33.33%;
-        }
-
-        @media (max-width: 768px) {
-            flex: 1 0 50%;
-            max-width: 50%;
-            padding-bottom: 50%;
-        }
-
-        @media (max-width: 480px) {
-            flex: 1 0 100%;
-            max-width: 100%;
-            padding-bottom: 100%;
-        }
-    }
-    
-    .image-item img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-
         &:hover {
             cursor: pointer;
         }
+        flex: 1 0 21%; /* Ajusta para 21% para garantir margens */
+        margin: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
     }
+    
+    .image-item img {
+        width: 100%;
+        height: auto;
+        display: block; /* Remove espaço extra abaixo da imagem */
+    }
+    
     .container {
         width: 100%;
 
@@ -82,7 +39,7 @@
                 transition: opacity 0.5s ease; // Transição suave de opacidade
 
             }
-            margin-top:150px;
+            margin-top:100px;
             width:100%;
             h1 {
                 position:absolute;
@@ -90,7 +47,6 @@
                 left: 0;
                 right: 0;
                 font-size:7rem;
-                word-break: break-all;
                 text-align: center;
                 font-weight: 600;
                 text-shadow: 4px 4px 0px #00000056;
@@ -104,21 +60,29 @@
            
         }
     }
+
     @media (max-width: 768px) {
         .mariana {
-            opacity: 0; // Faz a imagem desaparecer
-            width: 0; // Reduz a largura para zero para não ocupar espaço
-            height: 0; // Reduz a altura para zero
-            transition: opacity 0.5s ease; // Transição suave de opacidade
-
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            top:100px !important;
+            width:100% !important;
+            height: 70%;
         }
         h1 {
             position: inherit;
 
             width:100%;
-            font-size:3rem !important;
+            font-size:2rem !important;
+            p {
+                margin-top:20px;
+                font-size:1.5rem !important;
+
+            }
         }
     }
+
     .modal {
         display: none;
         position: fixed;
