@@ -1,0 +1,11 @@
+<div class="image-scroll-container">
+    <div class="image-scroll-track">
+        <div *ngFor="let image of images" class="image-scroll-item">
+            <img [src]="image.src" [alt]="image.alt">
+        </div>
+        <!-- Duplicar itens para criar efeito contínuo -->
+        <div *ngFor="let image of images" class="image-scroll-item">
+            <img [src]="image.src" [alt]="image.alt">
+        </div>
+    </div>
+</div>

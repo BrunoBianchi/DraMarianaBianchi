@@ -1,0 +1,175 @@
+:host {
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(134, 135, 138);
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: rgb(134, 135, 138);
+    }
+    
+    .image-item {
+        flex: 1 0 25%;
+        max-width: 25%;
+        position: relative;
+        padding-bottom: 25%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        @media (max-width: 1200px) {
+            flex: 1 0 33.33%;
+            max-width: 33.33%;
+            padding-bottom: 33.33%;
+        }
+        @media (max-width: 2000px) {
+            flex: 1 0 33.33%;
+            max-width: 33.33%;
+            padding-bottom: 33.33%;
+        }
+
+        @media (max-width: 768px) {
+            flex: 1 0 50%;
+            max-width: 50%;
+            padding-bottom: 50%;
+        }
+
+        @media (max-width: 480px) {
+            flex: 1 0 100%;
+            max-width: 100%;
+            padding-bottom: 100%;
+        }
+    }
+    
+    .image-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .container {
+        width: 100%;
+
+        .title {
+            width:100%;
+            img {
+                position: absolute;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                top:10px;
+                text-align: center;
+                z-index: -9999;
+                width:30rem;
+                transition: opacity 0.5s ease; // Transição suave de opacidade
+
+            }
+            margin-top:150px;
+            width:100%;
+            h1 {
+                position:absolute;
+                top:330px;
+                left: 0;
+                right: 0;
+                font-size:7rem;
+                word-break: break-all;
+                text-align: center;
+                font-weight: 600;
+                text-shadow: 4px 4px 0px #00000056;
+                p {
+                    font-size:2rem;
+                    font-weight: bold;
+                    color:white;
+                    text-shadow: 2px 2px 2px #000000;
+                }
+            }
+           
+        }
+    }
+    @media (max-width: 768px) {
+        img {
+            opacity: 0; // Faz a imagem desaparecer
+            width: 0; // Reduz a largura para zero para não ocupar espaço
+            height: 0; // Reduz a altura para zero
+            transition: opacity 0.5s ease; // Transição suave de opacidade
+
+        }
+        h1 {
+            position: inherit;
+
+            width:100%;
+            font-size:3rem !important;
+        }
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 60px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      
+      .modal.show {
+        display: block;
+      }
+      
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        height:90%;
+        max-width: 700px;
+      }
+      
+      .modal-content, #caption {  
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      
+      @keyframes zoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+      }
+      
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    
+}

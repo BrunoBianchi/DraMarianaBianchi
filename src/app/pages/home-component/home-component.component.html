@@ -1,0 +1,42 @@
+<app-social-midia></app-social-midia>
+<section id="home">
+    <div class="container" style="height: 400px;width:100%;">
+        <div class="title">
+            <img src="../../../assets/mariana.png">
+            <h1>Dra. Mariana Bianchi
+                <p>Especialista em lentes de resina e harmonização facial</p>
+            </h1>
+        </div>
+
+    </div>
+</section>
+<app-textscroll-component></app-textscroll-component>
+
+
+
+
+<section class="images" id="lentes">
+
+    <div class="image-gallery">
+
+        <div class="image-item" *ngFor="let image of imagesLentes" (click)="openDialog(image.src, image.alt)">
+            <img [src]="image.src" [alt]="image.alt">
+        </div>
+    </div>
+</section>
+
+<hr>
+<section class="images" id="harmonizacao">
+    <div class="image-gallery">
+        <div class="image-item" *ngFor="let image of imagesHarmonizacao" (click)="openDialog(image.src, image.alt)">
+            <img [src]="image.src" [alt]="image.alt">
+        </div>
+    </div>
+</section>
+
+<app-feedback-carousell id="feedback"></app-feedback-carousell>
+
+<div id="myModal" class="modal" [ngClass]="{'show': modalVisible}">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img class="modal-content" id="img01" [src]="modalImageSrc">
+</div>

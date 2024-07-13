@@ -1,0 +1,19 @@
+:host {
+    .social-midia {
+        display: inline-block;
+        position: fixed;
+        width:5%;
+        z-index: 9999999999999;
+        i {
+            color:black;
+            font-size:40px;
+            margin-top:10px;
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-3px);
+                transition: .3s;
+                color:white;
+            }
+        }
+    }
+}

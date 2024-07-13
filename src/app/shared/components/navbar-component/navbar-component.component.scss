@@ -1,0 +1,58 @@
+:host {
+    nav {
+        width: 100%;
+        margin: 0 auto;
+        line-height: normal;
+        background-color: transparent;
+        font-size: 18px;
+
+        .navbar-toggler {
+            color: white;
+            background-color: white;
+        }
+
+        .navbar-collapse {
+            justify-content: center;
+            
+            @media (max-width: 992px) {
+                justify-content: flex-end;
+            }
+        }
+
+        .nav-item {
+            margin-right: 20px;
+            .nav-link {
+                &.active {
+                    color: white;
+                }
+                color: rgb(201, 201, 201);
+                transition: 0.4s;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        .navbar-brand {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+    }
+
+    .agendar-consulta {
+        text-decoration: none;
+        padding: 7px;
+        border-radius: 20px;
+        border: 2px solid white;
+        color: white;
+        font-weight: 600;
+        transition: 0.2s;
+        &:hover {
+            cursor: pointer;
+            background-color: #202024;
+            border-color: transparent;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+:host {
+    .footer {
+
+        font-size: 15px;
+        bottom:0px;
+        padding:10px;
+        width:100%;
+        margin:0;
+        h5 {
+            color:black;
+        }
+        .copyright {
+            text-decoration: none;
+            color:rgb(0, 0, 0);
+        }
+
+            input {
+                border-radius:3px;
+                padding:10px;
+                outline: none;
+                &:focus {
+                    outline:none;
+                }
+                
+            }
+            button {
+                border-radius:3px;
+                padding:5px;
+                margin-top:10px;
+                width:100%;
+                background-color:rgb(191, 132, 223);
+                border-color: transparent;
+                color:white;
+                &:hover {
+                    background-color:rgb(173, 132, 223);
+                }
+            }
+
+    }
+}

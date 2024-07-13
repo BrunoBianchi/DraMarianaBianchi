@@ -1,0 +1,39 @@
+
+.image-scroll-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: #654321; /* Adicione a cor de fundo desejada */
+    padding: 50px 0px 0px 0px; /* Adicione o padding desejado */
+  }
+  
+  .image-scroll-track {
+    display: flex;
+    width: calc(100% * 2); /* Duplicar a largura para acomodar o efeito contínuo */
+    animation: scroll 60s linear infinite; /* Ajustar a duração da animação conforme necessário */
+  }
+  
+  .image-scroll-item {
+    flex: 0 0 auto;
+    width: calc(100% / 10); /* Ajustar conforme o número de imagens */
+    box-sizing: border-box;
+    padding: 0 10px; /* Espaçamento entre os itens */
+  }
+  
+  .image-scroll-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Ajuste conforme necessário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajuste conforme necessário */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  

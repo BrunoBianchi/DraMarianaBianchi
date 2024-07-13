@@ -1,1 +1,176 @@
+
 /* You can add global styles to this file, and also import other style files */
+
+    body {
+      background: rgb(134,135,138);
+background: linear-gradient(0deg, rgba(134,135,138,1) 0%, rgba(175,177,181,1) 100%);
+            .p-element {
+        background-color: transparent !important;
+      }
+      input {
+        background-color:  transparent !important;
+      }
+      .p-password {
+        background-color: transparent !important;
+        &::placeholder {
+          color:white;
+      }
+      }
+        .p-tag {
+            background-color: rgb(206, 206, 206) !important;
+            margin-left:6px;
+            margin-right:6px;
+            margin-top:-5px;
+            position: relative !important;
+            top:-2px !important;
+        }
+        color: white;
+        font-weight: 500;
+        background-color: #afb1b5;
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s;
+            outline: none !important;
+            box-shadow: none !important;
+            -webkit-appearance: none;
+            background: white !important;
+        }
+        .p-button-success{
+            border-radius:8px !important;
+            background-color: #202024;
+            padding:10px !important;
+            border:none;
+            &:hover {
+                background-color: rgb(54, 54, 54);
+            }
+        }
+        input[type="text"],input[type="email"],input[type="password"] {
+            border: none;
+            border-radius: 0;
+            &::placeholder {
+              color:white;
+          }
+            &:focus {
+                transition: background-color 5000s ease-in-out 0s;
+                outline: none;
+                box-shadow: none;
+                background: white !important;
+                -webkit-appearance: none;
+            }
+
+            &:active {
+                transition: background-color 5000s ease-in-out 0s;
+                outline: none;
+                background: white !important;
+                box-shadow: none;
+                -webkit-appearance: none;
+            }
+        }
+    }
+
+
+.invalid {
+    border-bottom: 1.4px solid rgb(220, 107, 107);
+}
+
+.input {
+    outline: none;
+    width: 100%;
+    border-bottom: 1.4px solid rgb(234, 232, 232);
+    background: white !important;
+    box-shadow: none;
+
+
+
+    .disabled {
+        background-color: rgb(242, 242, 242);
+        color: rgb(204, 204, 204);
+    }
+}
+// general styles
+@import url('https://fonts.googleapis.com/css?family=Oxygen:700');
+
+@mixin transition-transform($what: all, $duration: 1.4s, $timing: ease-in-out, $delay: 0s, $preface:webkit moz ms o spec) {
+  @each $browser in $preface {
+    @if ($browser == spec) {
+      transition: $what $duration $timing $delay;
+    } @else {
+      -#{$browser}-transition: $what $duration $timing $delay;
+    }
+  }
+}
+
+
+
+
+
+// marquee styles
+.marquee-wrap {
+  -webkit-box-shadow: inset 0px -1px 37px -8px rgba(0,0,0,0.24);
+  -moz-box-shadow: inset 0px -1px 37x -8px rgba(0,0,0,0.24);
+  box-shadow: inset 0px -1px 37px -8px rgba(0,0,0,0.24);
+    background-color: white;
+    padding:60px;
+  position: relative;
+  color:black !important;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom:-10px;
+  &,
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+  
+    list-style-type: none;
+  }
+  > li {
+    color:black;
+    display: flex;
+    align-items: center;
+    width: var(--scroller-size);
+    will-change: transform; // optimise performance
+    animation: text-scroller 15000ms linear 0ms normal infinite;
+    text-indent: 0;
+    justify-content: space-around;
+    @include transition-transform(all,3000ms, linear, 0ms);
+    white-space: nowrap;
+
+    @at-root {
+      @keyframes text-scroller {
+        100% {
+          transform: translateX(calc(var(--scroller-size)*-0.5));
+        }
+      }
+    }
+
+    // reverse second line
+    &:nth-child(2) {
+      animation-direction: reverse;
+      color: blue;
+    }
+    &:nth-child(4) {
+        animation-direction: reverse;
+        color: blue;
+      }
+    > ul {
+      li {
+        display: inline-block;
+        padding: 0 5vw;
+        font-size: 7vw;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+:root {
+  --scroller-size: 150vw;
+
+  @media only screen and (max-width: 600px) {
+    --scroller-size: 200vw;
+  }
+}
