@@ -1,39 +1,39 @@
-
 .image-scroll-container {
-    overflow: hidden;
-    width: 100%;
-    background-color: #654321; /* Adicione a cor de fundo desejada */
-    padding: 50px 0px 0px 0px; /* Adicione o padding desejado */
-  }
-  
+  overflow: hidden;
+  width: 100%;
+  background-color: #654321; // Cor de fundo desejada
+  padding: 50px 0 0;
+
   .image-scroll-track {
     display: flex;
-    width: calc(100% * 2); /* Duplicar a largura para acomodar o efeito contínuo */
-    animation: scroll 60s linear infinite; /* Ajustar a duração da animação conforme necessário */
+    width: 200%; // Duplica a largura para o efeito contínuo
+    animation: scroll 60s linear infinite; // Ajusta a duração conforme necessário
+    @media (max-width: 768px) {
+      .image-scroll-item { 
+        width: calc(100% / 4) !important;
+      }
+    }
+    .image-scroll-item {
+      flex: 0 0 auto;
+      width: calc(100% / 7); // Ajusta baseado no número de imagens
+      padding: 0 10px; // Espaçamento entre itens
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px; // Ajusta conforme necessário
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra leve para profundidade
+      }
+    }
   }
-  
-  .image-scroll-item {
-    flex: 0 0 auto;
-    width: calc(100% / 7); /* Ajustar conforme o número de imagens */
-    box-sizing: border-box;
-    padding: 0 10px; /* Espaçamento entre os itens */
-  }
-  
-  .image-scroll-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px; /* Ajuste conforme necessário */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajuste conforme necessário */
-  }
-  
+
   @keyframes scroll {
-    0% {
+    from {
       transform: translateX(0);
     }
-    100% {
+    to {
       transform: translateX(-50%);
     }
   }
-  
-  
+}
