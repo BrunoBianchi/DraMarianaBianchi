@@ -1,5 +1,8 @@
 :host {
     .footer {
+        p {
+            color:black;
+        }
 
         font-size: 15px;
         bottom:0px;
@@ -7,11 +10,11 @@
         width:100%;
         margin:0;
         h5 {
-            color:black;
+            color:rgb(255, 255, 255);
         }
         .copyright {
             text-decoration: none;
-            color:rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
         }
 
             input {
