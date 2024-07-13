@@ -7,7 +7,7 @@
   .image-scroll-track {
     display: flex;
     width: 200%; // Duplica a largura para o efeito contínuo
-    animation: scroll 60s linear infinite; // Ajusta a duração conforme necessário
+    animation: scroll 70s linear infinite; // Ajusta a duração conforme necessário
     @media (max-width: 768px) {
       .image-scroll-item { 
         width: calc(100% / 4) !important;
@@ -33,7 +33,7 @@
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%);
+      transform: translateX(-700%);
     }
   }
 }
