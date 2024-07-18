@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { SocialMidiaComponent } from './shared/components/social-midia/social-midia.component';
 import { FeedbackCarousellComponent } from './shared/components/feedback-carousell/feedback-carousell.component';
+import { ContatoComponent } from './pages/contato/contato.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { FeedbackCarousellComponent } from './shared/components/feedback-carouse
 
     SocialMidiaComponent,
     FeedbackCarousellComponent,
+    ContatoComponent,
 
   ],
   imports: [
