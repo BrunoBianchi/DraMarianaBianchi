@@ -1,0 +1,14 @@
+:host {
+    .tags {
+
+        width:100%;
+        .tag {
+            display: flex;
+            justify-content: space-evenly;
+            padding:10px;
+            border-radius:5px;
+
+            width:100%;
+        }
+    }
+}

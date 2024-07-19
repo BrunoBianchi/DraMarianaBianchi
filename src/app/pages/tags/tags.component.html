@@ -1,0 +1,8 @@
+<div class="tags">
+    @for(tag of seoTags;track $index) {
+    <div class="tag" [routerLink]="['/tag',tag]">
+        <a href="/tag/{{tag}}">{{tag}}</a>
+    </div>
+
+    }
+</div>
